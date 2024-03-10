@@ -59,16 +59,16 @@ class CharacterFavorites(Base):
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
-    character_id = Column(Integer, ForeignKey('character.id'))
+    character_id = Column(Integer, ForeignKey('characters.id'))
     character = relationship(Character)
 
 
 class PlanetFavorites(Base):
-    __tablename__ = 'Planet_favorites'
+    __tablename__ = 'planet_favorites'
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
-    planet_id = Column(Integer, ForeignKey('planet.id'))
+    planet_id = Column(Integer, ForeignKey('planets.id'))
     planet = relationship(Planet)
 
 
